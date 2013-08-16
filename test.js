@@ -25,7 +25,7 @@ async.series([
 			assert(!err);
 			assert(res);
 
-			assert.strictEqual(res.name, 'Maiah'):
+			assert.strictEqual(res.name, 'Maiah');
 			assert.strictEqual(res.occupation, 'Ninja');
 		});
 	},
@@ -78,6 +78,19 @@ async.series([
 		});
 	},
 	function () {
-		db.pull
+		db.pull('/persons', function (err, res) {
+			assert(!err);
+			assert(res);
+			assert.strictEqual(res.length, 1);
+
+			var uuid = null;
+			for (uuid in res) {
+				var uu = res[uuid];
+				assert.strictEqual(uu.name, 'Maiah');
+				assert.strictEqual(uu.occupation, 'Ninja');
+			}
+
+			db.del(uuid);
+		});
 	}
 ]);
