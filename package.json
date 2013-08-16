@@ -1,0 +1,29 @@
+{
+  "name": "level-path",
+  "version": "0.0.0",
+  "description": "Saving JSON as paths using LevelDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maiah/level-path.git"
+  },
+  "keywords": [
+    "leveldb",
+    "levelup"
+  ],
+  "author": "Maiah Macariola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maiah/level-path/issues"
+  },
+  "dependencies": {
+    "levelup": "~0.13.0",
+    "leveldown": "~0.7.0"
+  },
+  "devDependencies": {
+    "async": "~0.2.9"
+  }
+}
