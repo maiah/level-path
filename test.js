@@ -2,7 +2,7 @@ var assert = require('assert'),
 		async = require('async');
 
 var LevelUp = require('levelup'),
-     LevelPath = require('./index.js');
+     LevelPath = require('./index');
 
 var db = LevelUp('./testdb');
 
