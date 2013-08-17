@@ -1,7 +1,7 @@
 level-path
 ==========
 
-Provides `push`, `pull`, and `liveStreamOn` methods to your LevelDB
+Provides `set`, `push`, `pull`, and `liveStreamOn` methods to your LevelDB
 
 ### Install
 ```bash
@@ -36,7 +36,7 @@ persons/65cdd174-259e-4e9d-9a73-3f8f3bd12843/occupation = Ninja
 db.pull('persons', function (err, res) {
   if (!err) {
     console.dir(res);
-	}
+  }
 });
 ```
 
@@ -44,8 +44,8 @@ This will show a JSON like below.
 ```
 {
   65cdd174-259e-4e9d-9a73-3f8f3bd12843: {
-	  name: 'Maiah',
-		occupation: 'Ninja'
-	}
+    name: 'Maiah',
+    occupation: 'Ninja'
+  }
 }
 ```
