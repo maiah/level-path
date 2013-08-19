@@ -31,14 +31,14 @@ name = Maiah
 occupation = Ninja
 ```
 
-You can also save any JSON structure as long as it is a valid JSON object.
+You can also save any valid JSON structure.
 ```js
 var person = {
   name: 'Maiah',
-	occupation: 'Ninja',
-	tools: {
-	  lang: 'js'
-	}
+  occupation: 'Ninja',
+  tools: {
+    lang: 'js'
+  }
 };
 
 db.set('/', person, function (err) {
@@ -67,7 +67,6 @@ This will put LevelDB data structure at the `person` path.
 ```
 person/name = Maiah
 person/occupation = Ninja
-person/tools/lang = js
 ```
 
 ### Push JSON object
