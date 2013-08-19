@@ -92,3 +92,55 @@ db.set('/', ninja, function (err) {
 		assert.strictEqual(value, 'Luxemborg');
 	});
 });
+
+db.set('/persons', ninja, function (err) {
+	assert(!err);
+
+	db.get('persons/name', function (err, value) {
+		assert(!err);
+
+		assert.strictEqual(value, 'Maiah');
+	});
+
+	db.get('persons/occupation', function (err, value) {
+		assert(!err);
+
+		assert.strictEqual(value, 'Ninja');
+	});
+
+	db.get('persons/tools/lang', function (err, value) {
+		assert(!err);
+
+		assert.strictEqual(value, 'js');
+	});
+
+	db.get('persons/rig/guitar/equalizer', function (err, value) {
+		assert(!err);
+
+		assert.strictEqual(value, 'EQ7');
+	});
+
+	db.get('persons/rig/guitar/distortion', function (err, value) {
+		assert(!err);
+
+		assert.strictEqual(value, 'Metalcore');
+	});
+
+	db.get('persons/country/asia/ph/name', function (err, value) {
+		assert(!err);
+
+		assert.strictEqual(value, 'Philippines');
+	});
+
+	db.get('persons/country/asia/ph/capital', function (err, value) {
+		assert(!err);
+
+		assert.strictEqual(value, 'Manila');
+	});
+
+	db.get('persons/country/europe', function (err, value) {
+		assert(!err);
+
+		assert.strictEqual(value, 'Luxemborg');
+	});
+});
